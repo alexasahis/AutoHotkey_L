@@ -52,13 +52,13 @@ int WINAPI _tWinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmd
 	// Set defaults, to be overridden by command line args we receive:
 	bool restart_mode = false;
 
-#ifndef AUTOHOTKEYSC
-	#ifdef _DEBUG
-		TCHAR *script_filespec = _T("Test\\Test.ahk");
-	#else
+//#ifndef AUTOHOTKEYSC
+	//#ifdef _DEBUG
+	//	TCHAR *script_filespec = _T("Test\\Test.ahk");
+	//#else
 		TCHAR *script_filespec = NULL; // Set default as "unspecified/omitted".
-	#endif
-#endif
+//	#endif
+//#endif
 
 	// The problem of some command line parameters such as /r being "reserved" is a design flaw (one that
 	// can't be fixed without breaking existing scripts).  Fortunately, I think it affects only compiled
